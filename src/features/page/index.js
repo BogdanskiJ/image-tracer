@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import ImageTracer from "imagetracerjs";
 import { SliderComponent } from "./slider";
-import { PageContainer } from "./styled";
+import { PageContainer, StyledInput, StyledPageBox } from "./styled";
+import { InputComponent } from "./input";
+import Button from "@mui/joy/Button";
 
 export const Page = () => {
 	const [files, setFiles] = useState([]);
@@ -62,18 +64,23 @@ export const Page = () => {
 
 	return (
 		<PageContainer>
-			<input
-				type="file"
-				id="fileInput"
-				onChange={handleFileChange}
-				multiple
-				accept="image/png, image/jpeg, image/jpg"
-			/>
-			<button onClick={convertImages} id="convertButton">
-				Konwertuj obrazy
-			</button>
-			<div id="output"></div>
-			{/* <SliderComponent marks={true} defaultValue={20} maxValue={40} /> */}
+			<StyledPageBox>
+				<SliderComponent
+					marks={true}
+					defaultValue={20}
+					minValue={0}
+					maxValue={40}
+					sliderName={"pierwszy"}
+				/>
+			</StyledPageBox>
+			<StyledPageBox>
+				<InputComponent handleFileChange={handleFileChange} />
+				<Button onClick={convertImages} id="convertButton">
+					Convert
+				</Button>
+				<div id="output"></div>
+			</StyledPageBox>
+
 			{/* {previewUrl && <img src={previewUrl} alt="Podgląd" />}
 			{convertedUrl && <img src={convertedUrl} alt="Przekształcony Obraz" />} */}
 		</PageContainer>

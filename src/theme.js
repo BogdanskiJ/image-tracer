@@ -1,6 +1,7 @@
-export const theme = {
+export const darkTheme = {
 	color: {
-		codGray: "#1b1b1b",
+		background: "#1b1b1b",
+		header: "#227766",
 		modalTransparent: "#000000e3",
 		keppel: "#33b198",
 		eucalyptus: "#227766",
@@ -22,6 +23,43 @@ export const theme = {
 		tulipTree: "#eca94b",
 		tacao: "#f0bd75",
 	},
+
+	breakpoint: {
+		xs: 0,
+		sm: `576px`,
+		md: `768px`,
+		lg: `992px`,
+		xl: `1200px`,
+		xxl: `1400px`,
+	},
+};
+
+export const lightTheme = {
+	color: {
+		background: "#ffffff",
+		header: "#e4523b",
+		modalTransparent: "#000000e3",
+		keppel: "#33b198",
+		eucalyptus: "#227766",
+		greenPea: "#174f44",
+		white: "#ffffff",
+		cinnabar: "#e4523b",
+		deepSeaGreen: "#0b454d",
+		goldTips: "#ecc417",
+		dixie: "#e8931e",
+		mineShaft: "#333333",
+		doveGray: "#666666",
+		gray: "#8c8c8c",
+		nobel: "#b3b3b3",
+		sahara: "#C1A110",
+		butteredRum: "#A0850D",
+		red: "#ff0000",
+		brightRed: "#b30000",
+		maroon: "#800000",
+		tulipTree: "#eca94b",
+		tacao: "#f0bd75",
+	},
+
 	breakpoint: {
 		xs: 0,
 		sm: `576px`,
